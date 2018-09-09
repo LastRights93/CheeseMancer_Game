@@ -61,29 +61,37 @@ public class PlayerController_V01 : MonoBehaviour
         if (Input.anyKey)
         {
 
+            // 
+            Quaternion RotationalReference = MainCamera.transform.rotation;
+            Vector3 TranslationProduct = new Vector3();
+
             // Movement
             if (Input.GetKey(Left))
             {
 
-                this.transform.position += Vector3.left * MovementSpeed * Time.deltaTime;
+                TranslationProduct = RotationalReference * Vector3.left;
+                this.transform.position += TranslationProduct * MovementSpeed * Time.deltaTime;
 
             }
             if (Input.GetKey(Right))
             {
 
-                this.transform.position += Vector3.right * MovementSpeed * Time.deltaTime;
+                TranslationProduct = RotationalReference * Vector3.right;
+                this.transform.position += TranslationProduct * MovementSpeed * Time.deltaTime;
 
             }
             if (Input.GetKey(Forward))
             {
 
-                this.transform.position += Vector3.forward * MovementSpeed * Time.deltaTime;
+                TranslationProduct = RotationalReference * Vector3.forward;
+                this.transform.position += TranslationProduct * MovementSpeed * Time.deltaTime;
 
             }
             if (Input.GetKey(Backward))
             {
 
-                this.transform.position += Vector3.back * MovementSpeed * Time.deltaTime;
+                TranslationProduct = RotationalReference * Vector3.back;
+                this.transform.position += TranslationProduct * MovementSpeed * Time.deltaTime;
 
             }
 
