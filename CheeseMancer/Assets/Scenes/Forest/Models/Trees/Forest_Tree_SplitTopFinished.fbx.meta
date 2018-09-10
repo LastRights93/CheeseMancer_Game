@@ -10,7 +10,17 @@ ModelImporter:
     2300000: //RootNode
     3300000: //RootNode
     4300000: Forest_Tree_SplitTop
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Forest_Tree_SplitTopMat
+    second: {fileID: 2100000, guid: 581e9b4239f082941b2de2c180d1a372, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Leaves
+    second: {fileID: 2100000, guid: 111f7359678b8014b83439f0249cdb64, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
